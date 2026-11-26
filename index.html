@@ -1,0 +1,1334 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>m豆传媒的免费版_短片剧集与微综艺_创作者故事与幕后花絮</title>
+<meta name="description" content="m豆传媒的免费版提供短片剧集、微综艺、创作者访谈与幕后花絮等可看条目，涵盖都市情感、悬疑短剧与生活纪录方向，适合想系统追看短内容与了解创作团队的观众。">
+<meta name="keywords" content="短片剧集,微综艺,都市情感短剧,幕后花絮,创作者访谈">
+<style>
+:root{
+  --ink:#15130f;
+  --ink-2:#3d3a34;
+  --ink-3:#6b665c;
+  --paper:#f6f2ea;
+  --panel:#fffdf8;
+  --line:#e2dccd;
+  --line-2:#cfc7b4;
+  --brand:#c2452d;
+  --brand-d:#9c3220;
+  --brand-soft:#f7e4dd;
+  --accent:#1f6f5c;
+  --accent-soft:#e0f0ea;
+  --gold:#b8860b;
+  --r:14px;
+  --r-s:8px;
+  --shadow:0 1px 2px rgba(21,19,15,.05),0 8px 24px rgba(21,19,15,.06);
+  --shadow-s:0 1px 2px rgba(21,19,15,.06);
+  --wrap:1320px;
+  --topbar-h:38px;
+  --header-h:64px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font);font-size:15px;line-height:1.75;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font-family:inherit;font-size:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px}
+
+/* ---------- 吸顶容器 ---------- */
+.sticky-shell{
+  position:sticky;top:0;z-index:60;
+  background:rgba(246,242,234,.94);
+  backdrop-filter:saturate(160%) blur(10px);
+  -webkit-backdrop-filter:saturate(160%) blur(10px);
+}
+.topbar{
+  background:var(--ink);color:#f2ede2;font-size:12.5px;
+  min-height:var(--topbar-h);
+  display:flex;align-items:center;
+}
+.topbar .wrap{display:flex;align-items:center;gap:14px;width:100%}
+.topbar .dot{width:6px;height:6px;border-radius:50%;background:#f0a58c;flex:none;box-shadow:0 0 0 3px rgba(240,165,140,.18)}
+.topbar .ticker{flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.topbar .ticker b{color:#ffd7c8;font-weight:600}
+.topbar .links{display:flex;gap:14px;flex:none}
+.topbar .links a{color:#c9c2b3;border-bottom:1px solid transparent}
+.topbar .links a:hover{color:#fff;border-bottom-color:#8a8271}
+
+.header{background:rgba(255,253,248,.92);border-bottom:1px solid var(--line)}
+.header .wrap{
+  max-width:var(--wrap);margin:0 auto;padding:0 24px;
+  height:var(--header-h);display:flex;align-items:center;gap:26px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand-name{font-size:19px;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.brand-name em{font-style:normal;color:var(--brand)}
+.nav{display:flex;gap:4px;flex:1;min-width:0;overflow:hidden}
+.nav a{
+  padding:7px 11px;border-radius:99px;font-size:14px;color:var(--ink-2);
+  white-space:nowrap;
+}
+.nav a:hover{background:var(--brand-soft);color:var(--brand-d)}
+.head-actions{display:flex;align-items:center;gap:10px;flex:none}
+.search{
+  display:flex;align-items:center;gap:6px;background:#f2eee4;
+  border:1px solid var(--line-2);border-radius:99px;padding:4px 6px 4px 12px;
+}
+.search input{
+  border:0;background:transparent;font-size:13.5px;width:132px;padding:3px 0;
+  color:var(--ink);outline:none;
+}
+.search input::placeholder{color:#9b9484}
+.search button{
+  border:0;background:var(--brand);color:#fff;border-radius:99px;
+  padding:5px 12px;font-size:13px;font-weight:600;
+}
+.search button:hover{background:var(--brand-d)}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;border-radius:99px;
+  padding:9px 18px;font-size:14px;font-weight:600;border:1px solid transparent;
+  transition:background .16s,color .16s,border-color .16s;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(194,69,45,.24)}
+.btn-primary:hover{background:var(--brand-d)}
+.btn-ghost{border-color:var(--line-2);color:var(--ink-2);background:var(--panel)}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand-d)}
+.btn-sm{padding:7px 14px;font-size:13px}
+
+/* ---------- 布局 ---------- */
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.layout{
+  display:grid;
+  grid-template-columns:184px minmax(0,1fr) 268px;
+  gap:34px;
+  align-items:start;
+  padding:34px 0 64px;
+}
+section[id],div[id]{scroll-margin-top:calc(var(--topbar-h) + var(--header-h) + 18px)}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(900px 300px at 82% -40%, rgba(194,69,45,.10), transparent 70%),
+    radial-gradient(600px 260px at 8% 0%, rgba(31,111,92,.08), transparent 70%),
+    var(--panel);
+}
+.hero .wrap{
+  display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:48px;padding-top:46px;padding-bottom:48px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;
+  letter-spacing:.08em;color:var(--brand-d);background:var(--brand-soft);
+  border:1px solid #eed3c9;border-radius:99px;padding:4px 12px;margin-bottom:18px;
+}
+.hero h1{font-size:clamp(30px,4vw,46px);letter-spacing:-.03em;line-height:1.16}
+.hero h1 span{color:var(--brand)}
+.hero-lead{
+  margin-top:16px;font-size:16px;color:var(--ink-2);max-width:36em;line-height:1.8;
+}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.pill{
+  font-size:12.5px;padding:5px 12px;border-radius:99px;background:#f2eee4;
+  border:1px solid var(--line-2);color:var(--ink-2);
+}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-stats{
+  display:flex;gap:26px;flex-wrap:wrap;margin-top:30px;padding-top:22px;
+  border-top:1px dashed var(--line-2);
+}
+.hero-stats div{min-width:88px}
+.hero-stats b{display:block;font-size:22px;letter-spacing:-.02em}
+.hero-stats small{color:var(--ink-3);font-size:12.5px}
+
+.hero-art{position:relative}
+.hero-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:18px;
+  box-shadow:var(--shadow);overflow:hidden;
+}
+.hero-card-top{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 16px;border-bottom:1px solid var(--line);
+  font-size:12.5px;color:var(--ink-3);
+}
+.hero-card-top b{color:var(--ink);font-size:13px}
+.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--brand);margin-right:6px;vertical-align:1px}
+.hero-list{padding:6px 16px 14px}
+.hero-list li{
+  display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px dashed var(--line);
+}
+.hero-list li:last-child{border-bottom:0}
+.hero-list .idx{
+  width:26px;height:26px;flex:none;border-radius:8px;background:#f2eee4;color:var(--ink-3);
+  display:grid;place-items:center;font-size:12px;font-weight:700;
+}
+.hero-list li:nth-child(1) .idx{background:var(--brand);color:#fff}
+.hero-list li:nth-child(2) .idx{background:#efd9d0;color:var(--brand-d)}
+.hero-list .nm{font-size:14px;font-weight:600;line-height:1.4}
+.hero-list .sub{font-size:12px;color:var(--ink-3);margin-top:2px}
+.hero-list .tag{
+  margin-left:auto;font-size:11.5px;color:var(--accent);background:var(--accent-soft);
+  border-radius:6px;padding:2px 8px;flex:none;white-space:nowrap;
+}
+.hero-badge{
+  position:absolute;right:-10px;bottom:-16px;background:var(--ink);color:#f4efe3;
+  border-radius:12px;padding:10px 16px;font-size:12.5px;box-shadow:var(--shadow);
+  border:1px solid #2b2822;
+}
+.hero-badge b{color:#ffd0bf;font-size:15px;display:block;line-height:1.4}
+
+/* ---------- 左频道栏 ---------- */
+.chan{position:sticky;top:calc(var(--topbar-h) + var(--header-h) + 22px)}
+.chan-title{
+  font-size:11.5px;letter-spacing:.12em;color:var(--ink-3);font-weight:700;
+  padding:0 10px 8px;
+}
+.chan ul{display:flex;flex-direction:column;gap:2px}
+.chan a{
+  display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:9px;
+  font-size:13.5px;color:var(--ink-2);
+}
+.chan a:hover{background:#efeade;color:var(--ink)}
+.chan a .n{margin-left:auto;font-size:11.5px;color:#a39c8b}
+.chan .cbar{width:4px;height:14px;border-radius:2px;background:var(--line-2);flex:none}
+.chan li:nth-child(1) .cbar{background:var(--brand)}
+.chan li:nth-child(2) .cbar{background:#d98343}
+.chan li:nth-child(3) .cbar{background:var(--accent)}
+.chan li:nth-child(4) .cbar{background:#7a6bae}
+.chan li:nth-child(5) .cbar{background:var(--gold)}
+.chan-foot{
+  margin-top:16px;padding:14px;border-radius:var(--r);background:var(--panel);
+  border:1px solid var(--line);font-size:12.5px;color:var(--ink-3);line-height:1.7;
+  position:static;
+}
+.chan-foot b{color:var(--ink);display:block;font-size:13px;margin-bottom:4px}
+
+/* ---------- 主内容通用 ---------- */
+.main{min-width:0;display:flex;flex-direction:column;gap:46px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:6px}
+.sec-head h2{font-size:22px;letter-spacing:-.02em}
+.sec-head .kicker{
+  display:block;font-size:11.5px;letter-spacing:.14em;color:var(--brand-d);
+  font-weight:700;margin-bottom:5px;text-transform:uppercase;
+}
+.sec-head .more{font-size:13px;color:var(--ink-3);white-space:nowrap;border-bottom:1px solid var(--line-2)}
+.sec-head .more:hover{color:var(--brand-d);border-color:var(--brand)}
+.sec-lead{font-size:14px;color:var(--ink-3);margin-top:8px;max-width:52em}
+
+/* 概览 */
+.overview{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:26px 28px;box-shadow:var(--shadow-s);
+}
+.overview p + p{margin-top:13px}
+.overview p{color:var(--ink-2);font-size:14.5px;line-height:1.85}
+.overview strong{color:var(--ink);background:linear-gradient(transparent 62%,#f8ddd3 62%)}
+.ov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.ov-grid div{
+  background:#f8f4ec;border:1px solid var(--line);border-radius:10px;padding:12px 14px;
+}
+.ov-grid b{display:block;font-size:13.5px;margin-bottom:3px}
+.ov-grid small{color:var(--ink-3);font-size:12.5px;line-height:1.6;display:block}
+
+/* 精选卡片 */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:16px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .16s,box-shadow .16s,border-color .16s;
+}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--line-2)}
+.card-thumb{position:relative;background:#e8e2d4;aspect-ratio:4/3;overflow:hidden}
+.card-thumb img{width:100%;height:100%;object-fit:cover}
+.card-badge{
+  position:absolute;left:9px;top:9px;background:rgba(21,19,15,.82);color:#f6f2ea;
+  font-size:11px;padding:3px 8px;border-radius:6px;letter-spacing:.02em;
+}
+.card-body{padding:13px 14px 15px;display:flex;flex-direction:column;gap:7px;flex:1}
+.card-body h3{font-size:15px;line-height:1.4}
+.card-type{font-size:11.5px;color:var(--brand-d);font-weight:700;letter-spacing:.02em}
+.card-desc{font-size:12.8px;color:var(--ink-3);line-height:1.65;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tags span{
+  font-size:11px;padding:2px 7px;border-radius:5px;background:#f2eee4;color:var(--ink-2);
+  border:1px solid #e7e0d1;
+}
+.card-foot{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  font-size:11.5px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:9px;
+}
+.card-foot .hot{color:var(--brand-d);font-weight:700}
+
+/* 更新流 */
+.feed{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.feed li{
+  display:flex;gap:14px;padding:13px 18px;border-bottom:1px solid var(--line);
+  align-items:flex-start;
+}
+.feed li:last-child{border-bottom:0}
+.feed li:nth-child(odd){background:#fdfaf3}
+.feed time{
+  flex:none;width:78px;font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;
+  padding-top:2px;
+}
+.feed .ft{font-size:14px;font-weight:600;line-height:1.45}
+.feed .fd{font-size:12.8px;color:var(--ink-3);margin-top:2px;line-height:1.6}
+.feed .fp{
+  margin-left:auto;flex:none;font-size:11px;color:var(--accent);background:var(--accent-soft);
+  padding:2px 8px;border-radius:5px;white-space:nowrap;margin-top:2px;
+}
+
+/* 分类入口 */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat{
+  background:var(--panel);border:1px solid var(--line);border-radius:11px;
+  padding:14px 13px;display:flex;flex-direction:column;gap:4px;
+  transition:border-color .16s,background .16s;
+}
+.cat:hover{border-color:var(--brand);background:#fffaf4}
+.cat b{font-size:14px}
+.cat small{font-size:11.5px;color:var(--ink-3);line-height:1.55}
+.cat .num{font-size:11px;color:var(--brand-d);font-weight:700}
+
+/* 深度解析 */
+.deep{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:30px 32px;box-shadow:var(--shadow-s);
+}
+.deep h3{font-size:17px;margin:26px 0 10px;padding-left:12px;border-left:3px solid var(--brand)}
+.deep h3:first-of-type{margin-top:20px}
+.deep p{font-size:14.5px;color:var(--ink-2);line-height:1.9;margin-bottom:12px}
+.deep ul{margin:10px 0 16px;display:flex;flex-direction:column;gap:8px}
+.deep ul li{
+  font-size:14px;color:var(--ink-2);line-height:1.75;padding-left:18px;position:relative;
+}
+.deep ul li::before{
+  content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:2px;
+  background:var(--brand);opacity:.6;
+}
+.deep ul li b{color:var(--ink)}
+.deep .note{
+  background:#f8f4ec;border:1px dashed var(--line-2);border-radius:10px;
+  padding:12px 16px;font-size:13.5px;color:var(--ink-2);margin:16px 0 4px;
+}
+
+/* 对照 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.cmp{
+  border:1px solid var(--line);border-radius:11px;padding:16px 18px;background:#fdfaf3;
+}
+.cmp h4{font-size:14.5px;margin-bottom:8px}
+.cmp.a{border-top:3px solid var(--brand)}
+.cmp.b{border-top:3px solid var(--accent)}
+.cmp ul li{font-size:13px;padding-left:14px}
+.cmp ul li::before{width:4px;height:4px;top:10px}
+
+/* 指南步骤 */
+.steps{counter-reset:s;display:flex;flex-direction:column;gap:12px}
+.step{
+  display:flex;gap:16px;background:var(--panel);border:1px solid var(--line);
+  border-radius:11px;padding:16px 18px;
+}
+.step::before{
+  counter-increment:s;content:counter(s,decimal-leading-zero);
+  flex:none;font-size:15px;font-weight:800;color:var(--brand);
+  width:34px;height:34px;border-radius:9px;background:var(--brand-soft);
+  display:grid;place-items:center;letter-spacing:-.03em;
+}
+.step h4{font-size:14.5px;margin-bottom:3px}
+.step p{font-size:13.2px;color:var(--ink-3);line-height:1.7}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:9px}
+.faq details{
+  background:var(--panel);border:1px solid var(--line);border-radius:11px;
+  padding:0 18px;overflow:hidden;
+}
+.faq details[open]{border-color:var(--line-2);box-shadow:var(--shadow-s)}
+.faq summary{
+  list-style:none;cursor:pointer;padding:14px 0;font-size:14.5px;font-weight:600;
+  display:flex;align-items:center;gap:10px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";margin-left:auto;font-size:19px;color:var(--ink-3);font-weight:400;
+  line-height:1;transition:transform .16s;
+}
+.faq details[open] summary::after{content:"–";color:var(--brand)}
+.faq .ans{padding:0 0 15px;font-size:13.6px;color:var(--ink-2);line-height:1.8}
+.faq .ans p+p{margin-top:8px}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cm{
+  background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:14px 16px;
+}
+.cm-top{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.ava{
+  width:28px;height:28px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:12px;font-weight:700;color:#fff;letter-spacing:0;
+}
+.cm-top .nm{font-size:13px;font-weight:600}
+.cm-top .when{margin-left:auto;font-size:11px;color:#a39c8b}
+.cm p{font-size:13.2px;color:var(--ink-2);line-height:1.7}
+.cm .ref{
+  display:inline-block;margin-top:7px;font-size:11.5px;color:var(--accent);
+  background:var(--accent-soft);border-radius:5px;padding:1px 7px;
+}
+
+/* 资讯 */
+.news{display:flex;flex-direction:column;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.news li{display:flex;gap:14px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.news li:last-child{border-bottom:0}
+.news img{width:104px;height:70px;border-radius:8px;object-fit:cover;flex:none;background:#e8e2d4}
+.news h4{font-size:14.5px;line-height:1.45;margin-bottom:3px}
+.news p{font-size:12.8px;color:var(--ink-3);line-height:1.65}
+.news time{font-size:11.5px;color:#a39c8b;margin-top:4px;display:block;font-variant-numeric:tabular-nums}
+
+/* 相关推荐 标签索引 */
+.rel{display:flex;flex-wrap:wrap;gap:9px}
+.rel a{
+  display:inline-flex;align-items:center;gap:7px;background:var(--panel);
+  border:1px solid var(--line);border-radius:99px;padding:7px 14px;font-size:13px;
+  color:var(--ink-2);
+}
+.rel a:hover{border-color:var(--brand);color:var(--brand-d);background:#fffaf4}
+.rel a .k{font-size:11px;color:var(--ink-3)}
+
+/* 榜单 */
+.board{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.bd{
+  background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:14px 16px;
+}
+.bd h4{font-size:13px;color:var(--ink-3);font-weight:700;letter-spacing:.06em;margin-bottom:9px}
+.bd ol{display:flex;flex-direction:column;gap:7px;counter-reset:r}
+.bd ol li{
+  display:flex;gap:9px;align-items:baseline;font-size:13px;line-height:1.5;
+}
+.bd ol li::before{
+  counter-increment:r;content:counter(r);
+  flex:none;width:16px;font-size:11px;font-weight:800;color:#b3ab98;
+  font-variant-numeric:tabular-nums;
+}
+.bd ol li:nth-child(1)::before{color:var(--brand)}
+.bd ol li:nth-child(2)::before{color:#d98343}
+.bd ol li:nth-child(3)::before{color:var(--gold)}
+.bd ol li span{margin-left:auto;font-size:11px;color:#a39c8b;flex:none}
+.tl{display:flex;flex-direction:column;gap:0}
+.tl li{display:flex;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.tl li:last-child{border-bottom:0}
+.tl time{flex:none;font-size:12px;color:var(--brand-d);font-weight:600;width:72px;font-variant-numeric:tabular-nums}
+.tl .tx{font-size:13.2px;color:var(--ink-2);line-height:1.6}
+.tl .tx b{color:var(--ink)}
+
+/* ---------- 右辅助栏 ---------- */
+.side{display:flex;flex-direction:column;gap:18px;min-width:0}
+.sbox{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:16px 16px 14px;box-shadow:var(--shadow-s);
+}
+.sbox h3{
+  font-size:13px;letter-spacing:.02em;margin-bottom:11px;
+  display:flex;align-items:center;gap:7px;
+}
+.sbox h3::before{content:"";width:3px;height:13px;background:var(--brand);border-radius:2px}
+.rank li{display:flex;gap:9px;align-items:baseline;padding:6px 0;font-size:13px;line-height:1.5}
+.rank li .r{
+  flex:none;width:17px;font-size:11.5px;font-weight:800;color:#b3ab98;
+  font-variant-numeric:tabular-nums;
+}
+.rank li:nth-child(1) .r{color:var(--brand)}
+.rank li:nth-child(2) .r{color:#d98343}
+.rank li:nth-child(3) .r{color:var(--gold)}
+.rank li .rn{min-width:0}
+.rank li .rc{margin-left:auto;font-size:11px;color:#a39c8b;flex:none}
+.toc li{padding:5px 0;font-size:13px}
+.toc a{color:var(--ink-2);border-bottom:1px solid transparent}
+.toc a:hover{color:var(--brand-d);border-color:#e7bfb2}
+.toc .tt{color:var(--ink-3);font-size:11.5px;margin-right:6px;font-variant-numeric:tabular-nums}
+.sbox .mini-note{font-size:12px;color:var(--ink-3);line-height:1.7;margin-top:8px}
+.quote{
+  font-size:13px;color:var(--ink-2);line-height:1.75;border-left:2px solid var(--brand);
+  padding-left:11px;margin-bottom:8px;
+}
+.quote cite{display:block;font-style:normal;font-size:11.5px;color:var(--ink-3);margin-top:5px}
+
+/* ---------- 页尾 ---------- */
+.footer{background:var(--ink);color:#cfc8b8;margin-top:20px;font-size:13px}
+.footer .wrap{padding-top:44px;padding-bottom:22px}
+.f-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid #2e2b24}
+.f-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.f-brand svg{width:32px;height:32px}
+.f-brand b{font-size:17px;color:#f4efe3;letter-spacing:-.02em}
+.f-brand b em{font-style:normal;color:#f0805f}
+.f-desc{color:#9d9687;line-height:1.8;max-width:30em;font-size:12.8px}
+.f-col h4{font-size:12.5px;color:#f4efe3;letter-spacing:.06em;margin-bottom:11px}
+.f-col li{padding:4px 0}
+.f-col a{color:#a49d8d;font-size:12.8px}
+.f-col a:hover{color:#fff}
+.f-bottom{
+  display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;
+  padding-top:18px;color:#8a8375;font-size:12px;line-height:1.7;
+}
+.f-bottom .note{max-width:56em}
+
+/* ---------- 搜索结果 ---------- */
+.search-note{
+  display:none;background:var(--brand-soft);border:1px solid #eed3c9;border-radius:10px;
+  padding:10px 14px;font-size:13px;color:var(--brand-d);
+}
+.search-note.on{display:block}
+.hidden{display:none !important}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1180px){
+  .layout{grid-template-columns:168px minmax(0,1fr) 240px;gap:24px}
+  .cats{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:1024px){
+  .layout{grid-template-columns:200px minmax(0,1fr);gap:26px}
+  .side{grid-column:1 / -1;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .hero-art{max-width:520px}
+  .nav{display:none}
+  .header .wrap{gap:14px}
+  .search input{width:110px}
+}
+@media (max-width:880px){
+  .ov-grid{grid-template-columns:1fr 1fr}
+  .comments{grid-template-columns:1fr}
+  .board{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+}
+@media (max-width:740px){
+  :root{--header-h:58px}
+  .wrap{padding:0 16px}
+  .layout{grid-template-columns:1fr;gap:30px;padding:24px 0 48px}
+  .chan{position:static;order:0}
+  .chan-title{padding-left:0}
+  .chan ul{flex-direction:row;overflow-x:auto;gap:8px;padding-bottom:4px;scrollbar-width:thin}
+  .chan ul li{flex:none}
+  .chan a{white-space:nowrap;background:var(--panel);border:1px solid var(--line)}
+  .chan a .n{display:none}
+  .chan .cbar{display:none}
+  .chan-foot{display:none}
+  .side{grid-template-columns:1fr}
+  .cats{grid-template-columns:1fr 1fr}
+  .ov-grid{grid-template-columns:1fr}
+  .hero .wrap{padding-top:30px;padding-bottom:34px}
+  .hero-stats{gap:18px}
+  .hero-badge{display:none}
+  .deep{padding:22px 18px}
+  .overview{padding:20px 18px}
+  .sec-head{flex-wrap:wrap}
+  .feed li{flex-wrap:wrap;gap:8px}
+  .feed time{width:auto}
+  .feed .fp{margin-left:0}
+  .news img{width:84px;height:60px}
+  .topbar .links{display:none}
+  .topbar{font-size:12px}
+  .head-actions .btn-ghost{display:none}
+  .search input{width:92px}
+  .f-top{grid-template-columns:1fr 1fr;gap:22px}
+  .footer .wrap{padding-top:32px}
+}
+@media (max-width:420px){
+  .cats{grid-template-columns:1fr}
+  .f-top{grid-template-columns:1fr}
+  .search input{width:70px}
+  .search button{padding:5px 9px}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<div class="sticky-shell">
+  <div class="topbar">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <div class="ticker">本周更新：<b>《夜行电车》第 8 集</b>上线 · 微综艺《三平米厨房》第二季定档 12 月 3 日 · 幕后花絮新增 <b>14 条</b></div>
+      <div class="links">
+        <a href="/#feed">更新日历</a>
+        <a href="/#faq">常见问题</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="/#top" aria-label="m豆传媒的免费版 首页">
+        <svg viewBox="0 0 40 40" role="img" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="11" fill="#15130f"/>
+          <circle cx="13" cy="20" r="7.2" fill="#c2452d"/>
+          <circle cx="25.5" cy="20" r="7.2" fill="#f0a58c" opacity=".92"/>
+          <path d="M20 8.6v22.8" stroke="#f6f2ea" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+          <circle cx="20" cy="20" r="2.4" fill="#f6f2ea"/>
+        </svg>
+        <span class="brand-name">m豆传媒的免费版<em>.</em></span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="/#overview">内容概览</a>
+        <a href="/#picks">精选条目</a>
+        <a href="/#feed">最新更新</a>
+        <a href="/#cats">分类</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#comments">观众评论</a>
+      </nav>
+      <div class="head-actions">
+        <form class="search" id="searchForm" role="search" onsubmit="return false;">
+          <label for="q" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">搜索条目</label>
+          <input id="q" type="search" placeholder="搜条目 / 类型" autocomplete="off">
+          <button type="submit" id="searchBtn">查找</button>
+        </form>
+        <a class="btn btn-ghost btn-sm" href="/#guide">入门路径</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">短片剧集 · 微综艺 · 幕后</span>
+        <h1 id="h1">m豆传媒的免费版</h1>
+        <p class="hero-lead">一个按月整理短片剧集与微综艺的免费观看入口：都市情感、悬疑短剧、生活纪录与创作者访谈四大方向，每集 8—20 分钟，附分集看点、更新时间与幕后花絮，方便你按类型挑片、按更新节奏追看。</p>
+        <div class="hero-meta">
+          <span class="pill">短片剧集 118 部</span>
+          <span class="pill">微综艺 26 档</span>
+          <span class="pill">幕后花絮 340 条</span>
+          <span class="pill">日更 2—4 条</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="/#picks">查看本周精选条目</a>
+          <a class="btn btn-ghost" href="/#feed">看更新日历</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>8—20′</b><small>单集时长</small></div>
+          <div><b>4 个</b><small>主方向</small></div>
+          <div><b>11-25</b><small>最近更新</small></div>
+          <div><b>免费</b><small>观看方式</small></div>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <b><span class="live-dot" aria-hidden="true"></span>今日更新 4 条</b>
+            <span>2026-11-25 09:40</span>
+          </div>
+          <ul class="hero-list">
+            <li>
+              <span class="idx">1</span>
+              <span>
+                <span class="nm">《夜行电车》第 8 集</span>
+                <span class="sub">悬疑短剧 · 单集 16 分钟 · 已更 8/12</span>
+              </span>
+              <span class="tag">新上线</span>
+            </li>
+            <li>
+              <span class="idx">2</span>
+              <span>
+                <span class="nm">《三平米厨房》先导片</span>
+                <span class="sub">微综艺 · 生活纪录 · 第二季</span>
+              </span>
+              <span class="tag">11-25</span>
+            </li>
+            <li>
+              <span class="idx">3</span>
+              <span>
+                <span class="nm">《合租第 90 天》全 10 集</span>
+                <span class="sub">都市情感 · 已完结 · 可连看</span>
+              </span>
+              <span class="tag">完结</span>
+            </li>
+            <li>
+              <span class="idx">4</span>
+              <span>
+                <span class="nm">导演手记：夜行电车调色</span>
+                <span class="sub">幕后花絮 · 6 分钟</span>
+              </span>
+              <span class="tag">花絮</span>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-badge">
+          <b>12 部</b>
+          本月新上短片剧集
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- 左频道栏 -->
+      <aside class="chan" aria-label="频道索引">
+        <div class="chan-title">频道索引</div>
+        <ul>
+          <li><a href="/#cats"><span class="cbar" aria-hidden="true"></span>都市情感短剧<span class="n">36</span></a></li>
+          <li><a href="/#cats"><span class="cbar" aria-hidden="true"></span>悬疑短剧<span class="n">28</span></a></li>
+          <li><a href="/#cats"><span class="cbar" aria-hidden="true"></span>生活纪录<span class="n">21</span></a></li>
+          <li><a href="/#cats"><span class="cbar" aria-hidden="true"></span>创作者访谈<span class="n">19</span></a></li>
+          <li><a href="/#cats"><span class="cbar" aria-hidden="true"></span>幕后花絮<span class="n">340</span></a></li>
+          <li><a href="/#cats"><span class="cbar" aria-hidden="true"></span>喜剧小品<span class="n">14</span></a></li>
+          <li><a href="/#cats"><span class="cbar" aria-hidden="true"></span>微综艺<span class="n">26</span></a></li>
+          <li><a href="/#cats"><span class="cbar" aria-hidden="true"></span>校园青春<span class="n">17</span></a></li>
+          <li><a href="/#board">热播榜单</a></li>
+          <li><a href="/#timeline">上线时间线</a></li>
+        </ul>
+        <div class="chan-foot">
+          <b>观看方式</b>
+          所有条目按集免费开放，无需注册即可查看分集看点与更新时间；收藏与追更需登录账号。
+        </div>
+      </aside>
+
+      <!-- 主内容 -->
+      <div class="main">
+
+        <div class="search-note" id="searchNote" role="status" aria-live="polite"></div>
+
+        <!-- 1 概览 -->
+        <section id="overview">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">Overview</span>
+              <h2>短片剧集与微综艺的内容版图</h2>
+            </div>
+            <a class="more" href="/#deep">看深度解析 →</a>
+          </div>
+          <div class="overview">
+            <p>短片剧集是把一部长剧的叙事压缩进 8—20 分钟单集的形态，一季通常 8—12 集，节奏快、信息密度高。按题材划分，最主流的是<strong>都市情感短剧</strong>与<strong>悬疑短剧</strong>：前者围绕合租、职场、婚恋关系展开，多用生活化对白推进；后者依赖单一悬念钩子，靠每集结尾的反转维持追看动力。</p>
+            <p>与之并列的是微综艺与生活纪录。微综艺单期 15—30 分钟，常见形态包括厨房实验、素人改造、小空间观察，比传统综艺更轻、更依赖人物本身的可看性。生活纪录则更接近短纪录片，讲一个小店、一段通勤、一个手艺人的日常。</p>
+            <p>再往下是创作者访谈与幕后花絮，它们不承担叙事功能，但决定了一部短片剧集值不值得投入时间：看导演怎么调度一场只有两个演员的戏、看调色与声音如何弥补预算、看编剧怎样在三分钟内建立人物关系。对第一次接触这类内容的人，建议先从已完结的都市情感短剧入手，再转到悬疑方向，最后看幕后花絮补足判断力。</p>
+            <div class="ov-grid">
+              <div><b>短片剧集</b><small>8—20 分钟/集，一季 8—12 集，多数当月完结</small></div>
+              <div><b>微综艺</b><small>15—30 分钟/期，4—8 期一季，人物驱动</small></div>
+              <div><b>幕后与访谈</b><small>3—10 分钟，讲调度、调色、编剧方法</small></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2 精选 -->
+        <section id="picks">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">Selected</span>
+              <h2>本周精选条目</h2>
+              <p class="sec-lead">按完结度、分集完成度与幕后资料完整度挑选，共 9 部，含 5 部短片剧集、2 档微综艺与 2 组幕后内容。</p>
+            </div>
+            <a class="more" href="/#feed">全部更新 →</a>
+          </div>
+          <div class="cards" id="pickCards">
+
+            <article class="card" data-key="夜行电车 悬疑 短剧">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/yexing-dianche08/400/300" width="400" height="300" loading="lazy" alt="《夜行电车》末班车厢对峙场景封面">
+                <span class="card-badge">悬疑短剧</span>
+              </div>
+              <div class="card-body">
+                <span class="card-type">已更 8/12 集</span>
+                <h3>夜行电车</h3>
+                <p class="card-desc">末班电车上七名乘客被困，每集揭开一个人的隐瞒。单集 16 分钟，靠封闭空间与对话推进，第 6 集起视角切换到司机。</p>
+                <div class="tags"><span>封闭空间</span><span>反转结构</span><span>群像</span></div>
+                <div class="card-foot"><span>热度 9.4 万</span><span class="hot">评分 8.6</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-key="合租第90天 都市情感 短剧">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/hezu-90days12/400/300" width="400" height="300" loading="lazy" alt="《合租第 90 天》三室一厅客厅剧照">
+                <span class="card-badge">都市情感</span>
+              </div>
+              <div class="card-body">
+                <span class="card-type">全 10 集完结</span>
+                <h3>合租第 90 天</h3>
+                <p class="card-desc">三个陌生人合租到期前的最后一个月，从分摊水电到互相隐瞒失业。台词密度高，适合连看，第 9 集的搬家戏是全季情绪高点。</p>
+                <div class="tags"><span>合租生活</span><span>群像日常</span><span>完结可连看</span></div>
+                <div class="card-foot"><span>热度 12.1 万</span><span class="hot">评分 8.9</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-key="三平米厨房 微综艺 生活">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/sanpingmi-kitchen07/400/300" width="400" height="300" loading="lazy" alt="《三平米厨房》小厨房灶台实景">
+                <span class="card-badge">微综艺</span>
+              </div>
+              <div class="card-body">
+                <span class="card-type">第二季 · 12-03 定档</span>
+                <h3>三平米厨房</h3>
+                <p class="card-desc">在不到三平米的出租屋厨房里做四人份晚餐，每期一位素人嘉宾带一道家乡菜。看点是空间极限与真实手忙脚乱，不做摆盘。</p>
+                <div class="tags"><span>素人嘉宾</span><span>出租屋料理</span><span>生活纪录</span></div>
+                <div class="card-foot"><span>先导片已上线</span><span class="hot">评分 8.4</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-key="午夜便利店 悬疑 短剧">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/wuye-bianlidian21/400/300" width="400" height="300" loading="lazy" alt="《午夜便利店》深夜收银台灯光场景">
+                <span class="card-badge">悬疑短剧</span>
+              </div>
+              <div class="card-body">
+                <span class="card-type">全 8 集完结</span>
+                <h3>午夜便利店</h3>
+                <p class="card-desc">夜班店员记录每位凌晨顾客的异常请求，八集八个独立故事，最后一集把线索收束到同一桩旧案。适合碎片时间单集看。</p>
+                <div class="tags"><span>单元剧</span><span>夜班视角</span><span>收束结构</span></div>
+                <div class="card-foot"><span>热度 7.8 万</span><span class="hot">评分 8.2</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-key="她说要辞职 都市情感 短剧">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/tashuo-cizhi15/400/300" width="400" height="300" loading="lazy" alt="《她说要辞职》办公室工位对峙剧照">
+                <span class="card-badge">都市情感</span>
+              </div>
+              <div class="card-body">
+                <span class="card-type">已更 6/10 集</span>
+                <h3>她说要辞职</h3>
+                <p class="card-desc">一个项目组在季度末的连环离职，用会议室的对话撑起整部剧。第 4 集那场只有两个人的加班戏被讨论最多，台词几乎不剪。</p>
+                <div class="tags"><span>职场</span><span>会议室群戏</span><span>长镜头</span></div>
+                <div class="card-foot"><span>热度 6.5 万</span><span class="hot">评分 8.1</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-key="修表铺的下午 生活纪录">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/xiubiaopu-afternoon04/400/300" width="400" height="300" loading="lazy" alt="《修表铺的下午》老式工作台与放大镜">
+                <span class="card-badge">生活纪录</span>
+              </div>
+              <div class="card-body">
+                <span class="card-type">单集 22 分钟</span>
+                <h3>修表铺的下午</h3>
+                <p class="card-desc">跟拍一间开了 31 年的修表铺，一个下午接待四位客人。没有旁白，靠环境声与手部特写推进，适合当背景音也适合细看。</p>
+                <div class="tags"><span>手艺纪录</span><span>无旁白</span><span>环境声</span></div>
+                <div class="card-foot"><span>热度 4.2 万</span><span class="hot">评分 8.8</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-key="导演手记 幕后花絮 夜行电车">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/daoyan-shouji09/400/300" width="400" height="300" loading="lazy" alt="导演手记中调色台与监视器画面">
+                <span class="card-badge">幕后花絮</span>
+              </div>
+              <div class="card-body">
+                <span class="card-type">6 分钟 · 11-25 上线</span>
+                <h3>导演手记：夜行电车调色</h3>
+                <p class="card-desc">讲车厢戏为什么压到青绿色、钠灯下的人脸怎么保留血色。附三组调色前后对比画面，对想了解低预算影像质感的人很有参考价值。</p>
+                <div class="tags"><span>调色</span><span>低预算制作</span><span>前后对比</span></div>
+                <div class="card-foot"><span>340 条花絮之一</span><span class="hot">收藏 2.1 千</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-key="编剧圆桌 创作者访谈">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/bianju-yuanzhuo11/400/300" width="400" height="300" loading="lazy" alt="编剧圆桌访谈现场四位编剧对谈">
+                <span class="card-badge">创作者访谈</span>
+              </div>
+              <div class="card-body">
+                <span class="card-type">访谈 · 38 分钟</span>
+                <h3>编剧圆桌：三分钟怎么立住人物</h3>
+                <p class="card-desc">四位短片编剧聊第一场戏的写法：是先给动作还是先给关系，删掉解释性台词之后靠什么让观众跟上。附三段剧本原稿对照。</p>
+                <div class="tags"><span>编剧方法</span><span>第一场戏</span><span>剧本对照</span></div>
+                <div class="card-foot"><span>收藏 3.6 千</span><span class="hot">评分 9.0</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-key="放学别走 校园青春 短剧">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/fangxue-biezou13/400/300" width="400" height="300" loading="lazy" alt="《放学别走》傍晚校门口场景">
+                <span class="card-badge">校园青春</span>
+              </div>
+              <div class="card-body">
+                <span class="card-type">已更 9/12 集</span>
+                <h3>放学别走</h3>
+                <p class="card-desc">高三最后一个学期的放学路上，四个学生用绕路的时间交换各自的决定。节奏慢但情绪准，第 7 集的雨中公交站被剪成短视频传播。</p>
+                <div class="tags"><span>校园</span><span>青春群像</span><span>慢节奏</span></div>
+                <div class="card-foot"><span>热度 8.3 万</span><span class="hot">评分 8.3</span></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- 3 更新 -->
+        <section id="feed">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">Updates</span>
+              <h2>最新更新与上线动态</h2>
+            </div>
+            <span class="pill">截至 2026-11-25 10:00</span>
+          </div>
+          <ul class="feed">
+            <li><time>今天 09:40</time><div><div class="ft">《夜行电车》第 8 集上线</div><div class="fd">司机视角揭开，前七集的乘客口供出现第一处矛盾。</div></div><span class="fp">剧集</span></li>
+            <li><time>今天 08:55</time><div><div class="ft">《三平米厨房》第二季先导片发布</div><div class="fd">本季固定嘉宾从素人换成三位夜班工作者，正片 12 月 3 日更新。</div></div><span class="fp">微综艺</span></li>
+            <li><time>今天 08:10</time><div><div class="ft">导演手记：夜行电车调色</div><div class="fd">6 分钟花絮，附三组调色前后对比，已归入幕后花絮频道。</div></div><span class="fp">花絮</span></li>
+            <li><time>昨天 21:30</time><div><div class="ft">《合租第 90 天》全 10 集完结</div><div class="fd">第 10 集搬家戏上线，全季进入可连看状态。</div></div><span class="fp">完结</span></li>
+            <li><time>昨天 19:05</time><div><div class="ft">《她说要辞职》第 6 集更新</div><div class="fd">项目组会议戏进入第二场，离职人数增至两人。</div></div><span class="fp">剧集</span></li>
+            <li><time>11 月 23 日</time><div><div class="ft">《放学别走》第 9 集上线</div><div class="fd">高考志愿填报夜，四个主角第一次出现意见分裂。</div></div><span class="fp">剧集</span></li>
+            <li><time>11 月 22 日</time><div><div class="ft">《午夜便利店》番外短片上线</div><div class="fd">补完正片第 3 集未交代的顾客去向，时长 7 分钟。</div></div><span class="fp">番外</span></li>
+            <li><time>11 月 20 日</time><div><div class="ft">编剧圆桌第二期发布</div><div class="fd">主题为“三分钟怎么立住人物”，附三段剧本原稿。</div></div><span class="fp">访谈</span></li>
+            <li><time>11 月 18 日</time><div><div class="ft">《修表铺的下午》上线</div><div class="fd">生活纪录方向新条目，单集 22 分钟，无旁白。</div></div><span class="fp">纪录</span></li>
+            <li><time>11 月 15 日</time><div><div class="ft">悬疑短剧专题合集更新</div><div class="fd">新增《夜行电车》《午夜便利店》两部，合集共 28 部。</div></div><span class="fp">合集</span></li>
+            <li><time>11 月 12 日</time><div><div class="ft">《合租第 90 天》第 9 集花絮</div><div class="fd">搬家戏拍了 11 条，导演说明为什么选最后一条。</div></div><span class="fp">花絮</span></li>
+            <li><time>11 月 8 日</time><div><div class="ft">都市情感短剧排播调整</div><div class="fd">周更改为每周二、周五双更，涉及 9 部在更条目。</div></div><span class="fp">排播</span></li>
+          </ul>
+        </section>
+
+        <!-- 4 分类 -->
+        <section id="cats">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">Categories</span>
+              <h2>按类型找片</h2>
+            </div>
+            <span class="pill">8 个方向</span>
+          </div>
+          <div class="cats">
+            <a class="cat" href="/#picks"><span class="num">36 部</span><b>都市情感短剧</b><small>合租、职场、婚恋关系，台词密度高</small></a>
+            <a class="cat" href="/#picks"><span class="num">28 部</span><b>悬疑短剧</b><small>封闭空间、单元反转、线索收束</small></a>
+            <a class="cat" href="/#picks"><span class="num">21 部</span><b>生活纪录</b><small>小店、通勤、手艺人，无旁白居多</small></a>
+            <a class="cat" href="/#picks"><span class="num">19 条</span><b>创作者访谈</b><small>编剧、导演、剪辑的对谈与方法拆解</small></a>
+            <a class="cat" href="/#picks"><span class="num">340 条</span><b>幕后花絮</b><small>调色、声音、现场调度，3—10 分钟</small></a>
+            <a class="cat" href="/#picks"><span class="num">14 部</span><b>喜剧小品</b><small>单场景、强台词、每集独立成篇</small></a>
+            <a class="cat" href="/#picks"><span class="num">26 档</span><b>微综艺</b><small>厨房、改造、小空间观察，期数短</small></a>
+            <a class="cat" href="/#picks"><span class="num">17 部</span><b>校园青春</b><small>放学路、志愿填报、毕业前的决定</small></a>
+          </div>
+        </section>
+
+        <!-- 5 深度解析 -->
+        <section id="deep">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">In Depth</span>
+              <h2>短片剧集怎么挑：从类型差异到单集结构</h2>
+            </div>
+          </div>
+          <div class="deep">
+            <p>短片剧集和长剧最大的差别不在时长，而在结构。一部 40 分钟的长剧可以花 15 分钟铺垫环境，一部 16 分钟的短片剧集必须在开场 90 秒内完成三件事：交代空间、建立人物关系、抛出一个待解的问题。理解这一点，挑片效率会明显提高——你不需要看完前三集才知道合不合口味，第一集的前三分钟基本就能判断。</p>
+
+            <h3>都市情感与悬疑：两种完全不同的钩子</h3>
+            <p>都市情感短剧的钩子是<strong>关系张力</strong>。《合租第 90 天》开场不是冲突，而是三个人在分摊水电费时的沉默，观众立刻知道这屋里有人手头紧。《她说要辞职》则把钩子放在会议室的座次上，谁坐主位、谁一直在倒水，前两分钟就把权力关系摆完。这类条目判断标准很直接：看第一场戏有没有用动作而非台词交代关系。</p>
+            <p>悬疑短剧的钩子是<strong>信息差</strong>。《夜行电车》每集给一个乘客的隐瞒，观众掌握的信息始终比剧中其他人多一点，这个差值就是追看动力。《午夜便利店》走单元路线，八集八个故事，最后一集才把线索收束——这类条目要留意它是否在最后一集真的收得回来，很多短剧在前七集铺得太满，第八集草草了事。</p>
+
+            <h3>单集结构：三分钟、八分钟、十六分钟</h3>
+            <ul>
+              <li><b>3 分钟以内</b>：多为喜剧小品或情绪片段，只有一个转折点，适合碎片时间。判断标准是结尾有没有一个明确的“翻”，翻得生硬就是凑时长。</li>
+              <li><b>8—12 分钟</b>：单元剧常见长度，能容纳一次完整的起承转合。《午夜便利店》单集 11 分钟，正好够一个顾客从进门到离开。</li>
+              <li><b>16—22 分钟</b>：接近传统单集，可以放两条线。《夜行电车》16 分钟里通常有一条主线加一段回忆闪回，闪回长度控制在 90 秒内。</li>
+            </ul>
+            <p>时长不是越长越好。22 分钟的《修表铺的下午》几乎没有情节，靠手部特写和环境声撑住，是因为它拍的是“一个下午”的时间感，而不是一个故事。如果你要的是强情节，这类条目会让你觉得慢。</p>
+
+            <h3>幕后内容为什么值得看</h3>
+            <p>幕后花絮和创作者访谈不承担叙事，但它们提供判断依据。看过“导演手记：夜行电车调色”之后，再回看车厢戏，你会注意到钠灯下的人脸保留了血色、背景压到青绿——这不是滤镜，是刻意的色彩分离。编剧圆桌里那段“删掉解释性台词之后靠什么让观众跟上”的讨论，也能直接用来评价其他短片剧集：解释性台词越少还能看懂，剧本基本功越扎实。</p>
+            <div class="note">一个实用判断：如果一部短片剧集的幕后资料只有宣传向的采访，没有具体的调度、调色或剧本方法，通常说明制作方对内容本身的讨论意愿不强，条目质量也偏中游。</div>
+
+            <h3>免费观看与追更的取舍</h3>
+            <p>这类内容多数按集免费开放，但更新节奏差异很大。已完结的条目可以连看，适合一次看完；在更的条目要看清周更还是双更，《她说要辞职》目前每周二、周五更新，一集 14 分钟，追更成本不高。若你只想先试水，从已完结的《合租第 90 天》或《午夜便利店》入手最稳——两部都不长，看完能快速建立对这类内容的判断标准。</p>
+          </div>
+        </section>
+
+        <!-- 6 指南 -->
+        <section id="guide">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">Guide</span>
+              <h2>第一次看，按这个顺序来</h2>
+            </div>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div>
+                <h4>先看一部已完结的都市情感短剧</h4>
+                <p>推荐《合租第 90 天》全 10 集，单集 18 分钟。它的关系建立方式最典型，看完你就知道这类内容靠什么留住观众。</p>
+              </div>
+            </div>
+            <div class="step">
+              <div>
+                <h4>再试一部单元结构的悬疑短剧</h4>
+                <p>《午夜便利店》全 8 集，单集 11 分钟。单元剧的好处是随时停下不亏，适合通勤或睡前看两集。</p>
+              </div>
+            </div>
+            <div class="step">
+              <div>
+                <h4>挑一部在更的，观察更新节奏</h4>
+                <p>《夜行电车》已更 8/12 集，周更两次。追更前先确认排播，避免看完第 8 集要等一周才更新。</p>
+              </div>
+            </div>
+            <div class="step">
+              <div>
+                <h4>补一组幕后内容，建立判断力</h4>
+                <p>先看“导演手记：夜行电车调色”，再看编剧圆桌第二期。两组加起来不到 45 分钟，但对判断剧本和影像质量帮助最大。</p>
+              </div>
+            </div>
+            <div class="step">
+              <div>
+                <h4>最后按类型横向比较</h4>
+                <p>把同类型的 3—4 部放在一起看第一集前三分钟，谁能在 90 秒内建立关系和悬念，谁的完成度就更高。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7 FAQ -->
+        <section id="faq">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">FAQ</span>
+              <h2>常见问题</h2>
+            </div>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>短片剧集一般多久更新一次？</summary>
+              <div class="ans"><p>多数是周更一次，一季 8—12 集，更新周期约两到三个月。也有双更的排播，例如《她说要辞职》目前在每周二、周五各更新一集。开追之前先看条目的更新说明，避免把在更剧当成完结剧连看。</p></div>
+            </details>
+            <details>
+              <summary>都市情感短剧和悬疑短剧的主要区别是什么？</summary>
+              <div class="ans"><p>钩子不同。都市情感靠关系张力推进，第一场戏通常用动作交代人物处境；悬疑靠信息差，观众掌握的信息比剧中人多一点，靠这个差值维持追看。结构上，都市情感多为连续剧，悬疑常见单元加收束的结构，例如《午夜便利店》八集八个故事，最后一集合流。</p></div>
+            </details>
+            <details>
+              <summary>第一次接触，从哪一部开始看比较好？</summary>
+              <div class="ans"><p>建议从已完结的《合租第 90 天》入手，全 10 集、单集 18 分钟，关系建立方式典型，看完能建立基本判断。如果更偏好强情节，可以直接看《午夜便利店》，单元结构容错率高，随时停下不亏。</p></div>
+            </details>
+            <details>
+              <summary>短片剧集的评判标准通常看哪几项？</summary>
+              <div class="ans"><p>三项最实用：一是开场 90 秒内有没有用动作而非台词建立关系；二是单集有没有明确转折，结尾的“翻”是否自然；三是幕后资料是否具体，有调度、调色或剧本方法的讨论，通常说明制作方对内容本身有把握。</p></div>
+            </details>
+            <details>
+              <summary>微综艺和传统综艺差别在哪？</summary>
+              <div class="ans"><p>时长和驱动方式不同。微综艺单期 15—30 分钟，一季 4—8 期，靠人物本身的可看性而非赛制推进。《三平米厨房》就是典型，三平米空间加一位素人嘉宾加一道家乡菜，没有淘汰机制，看点是真实的手忙脚乱。</p></div>
+            </details>
+            <details>
+              <summary>幕后花絮值得花时间看吗？</summary>
+              <div class="ans"><p>值得，但要挑。宣传向的采访信息量低，讲具体方法的才有价值，例如调色前后对比、剧本删改过程、一场戏拍 11 条为什么选最后一条。看两三组这类内容之后，评价其他短片剧集的准确度会明显提高。</p></div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8 评论 -->
+        <section id="comments">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">Comments</span>
+              <h2>观众在聊什么</h2>
+            </div>
+            <span class="pill">14 条 · 近 30 天</span>
+          </div>
+          <div class="comments">
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#c2452d">林</span><span class="nm">林间有雾</span><span class="when">11-25</span></div><p>《夜行电车》第 8 集把司机视角一开，前面几集乘客的说法全都能对上时间线，这个处理比直接给答案高明。</p><span class="ref">夜行电车</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#1f6f5c">周</span><span class="nm">周末不加班</span><span class="when">11-25</span></div><p>《合租第 90 天》第 9 集搬家戏是真的顶，三个人谁都没说挽留，但都在拖时间。台词写得克制。</p><span class="ref">合租第 90 天</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#7a6bae">陈</span><span class="nm">陈小满</span><span class="when">11-24</span></div><p>《三平米厨房》先导片看完了，本季换成夜班工作者当嘉宾，感觉比第一季素人更有话题，正片等 12 月 3 日。</p><span class="ref">三平米厨房</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#b8860b">阿</span><span class="nm">阿茶不加冰</span><span class="when">11-24</span></div><p>《午夜便利店》番外补了第 3 集那个顾客的去向，虽然只有 7 分钟，但把正片里一个明显的坑填了。</p><span class="ref">午夜便利店</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#d98343">沈</span><span class="nm">沈舟</span><span class="when">11-23</span></div><p>《她说要辞职》第 4 集那场加班戏几乎不剪，两个演员撑了 6 分钟，这种拍法在短片里不常见。</p><span class="ref">她说要辞职</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#3d3a34">顾</span><span class="nm">顾言</span><span class="when">11-23</span></div><p>调色那期花絮看完回头重看车厢戏，确实钠灯下脸还是暖的，背景压青。低成本能做到这个分离不容易。</p><span class="ref">幕后花絮</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#c2452d">叶</span><span class="nm">叶青柠</span><span class="when">11-22</span></div><p>《修表铺的下午》全程没旁白，一开始怕看不下去，结果跟着手部特写看完了。适合戴耳机看。</p><span class="ref">修表铺的下午</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#1f6f5c">吴</span><span class="nm">吴所谓</span><span class="when">11-22</span></div><p>编剧圆桌那段讲删解释性台词，听完去重看《放学别走》，发现它确实很少解释，全靠动作。</p><span class="ref">创作者访谈</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#7a6bae">何</span><span class="nm">何须问</span><span class="when">11-21</span></div><p>《放学别走》节奏偏慢，第 7 集雨中公交站是亮点，但前四集有点拖。喜欢快节奏的可能要耐心。</p><span class="ref">放学别走</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#b8860b">苏</span><span class="nm">苏打汽水</span><span class="when">11-20</span></div><p>悬疑短剧合集这次新增两部都还不错，但《午夜便利店》最后一集收得有点急，前七集铺太多了。</p><span class="ref">悬疑短剧</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#d98343">李</span><span class="nm">李不二</span><span class="when">11-19</span></div><p>双更排播调整之后追起来舒服多了，之前周更一次真的容易忘剧情。</p><span class="ref">更新动态</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#3d3a34">郑</span><span class="nm">郑有光</span><span class="when">11-18</span></div><p>都市情感这条线整体完成度比悬疑稳，《合租》《她说要辞职》都能看，悬疑有几部收尾仓促。</p><span class="ref">都市情感</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#c2452d">白</span><span class="nm">白露未晞</span><span class="when">11-16</span></div><p>希望多出点幕后，尤其声音设计方向的，现在调色有了，声音还没看到。</p><span class="ref">幕后花絮</span></div>
+            <div class="cm"><div class="cm-top"><span class="ava" style="background:#1f6f5c">许</span><span class="nm">许一川</span><span class="when">11-15</span></div><p>喜剧小品那 14 部单集 3 分钟，通勤看刚好。有几部结尾翻得生硬，但整体及格。</p><span class="ref">喜剧小品</span></div>
+          </div>
+        </section>
+
+        <!-- 9 资讯 -->
+        <section id="news">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">News</span>
+              <h2>相关资讯</h2>
+            </div>
+          </div>
+          <ul class="news">
+            <li>
+              <img src="https://picsum.photos/seed/news-yexing-dianche/600/400" width="600" height="400" loading="lazy" alt="《夜行电车》车厢拍摄现场报道配图">
+              <div>
+                <h4>《夜行电车》确认 12 集完结，第 9 集起加入新乘客</h4>
+                <p>制作方在花絮中透露，后四集会引入一名在第二集只出现过背影的乘客，把前期的口供矛盾串联起来。</p>
+                <time>2026-11-25</time>
+              </div>
+            </li>
+            <li>
+              <img src="https://picsum.photos/seed/news-sanpingmi-s2/600/400" width="600" height="400" loading="lazy" alt="《三平米厨房》第二季拍摄厨房布景">
+              <div>
+                <h4>《三平米厨房》第二季定档 12 月 3 日，嘉宾改为夜班工作者</h4>
+                <p>先导片已上线，本季共 6 期，每期仍是一位素人带一道家乡菜，拍摄空间维持在不到三平米。</p>
+                <time>2026-11-25</time>
+              </div>
+            </li>
+            <li>
+              <img src="https://picsum.photos/seed/news-hezu-wanjie/600/400" width="600" height="400" loading="lazy" alt="《合租第 90 天》完结篇搬家场景">
+              <div>
+                <h4>《合租第 90 天》全 10 集完结，搬家戏单条花絮播放破十万</h4>
+                <p>第 9 集搬家戏拍摄 11 条，导演说明为什么选最后一条，花絮已归入幕后频道。</p>
+                <time>2026-11-24</time>
+              </div>
+            </li>
+            <li>
+              <img src="https://picsum.photos/seed/news-bianju-yuanzhuo/600/400" width="600" height="400" loading="lazy" alt="编剧圆桌第二期录制现场">
+              <div>
+                <h4>编剧圆桌第二期上线，主题为“三分钟怎么立住人物”</h4>
+                <p>四位短片编剧对谈第一场戏的写法，附三段剧本原稿对照，时长 38 分钟。</p>
+                <time>2026-11-20</time>
+              </div>
+            </li>
+            <li>
+              <img src="https://picsum.photos/seed/news-paibo-tiaozheng/600/400" width="600" height="400" loading="lazy" alt="短片剧集排播调整说明配图">
+              <div>
+                <h4>都市情感短剧排播调整：周更改为每周二、周五双更</h4>
+                <p>涉及 9 部在更条目，包括《她说要辞职》《放学别走》，单集时长不变。</p>
+                <time>2026-11-08</time>
+              </div>
+            </li>
+            <li>
+              <img src="https://picsum.photos/seed/news-xiubiaopu/600/400" width="600" height="400" loading="lazy" alt="《修表铺的下午》老式修表工具特写">
+              <div>
+                <h4>《修表铺的下午》上线，生活纪录方向新增无旁白条目</h4>
+                <p>单集 22 分钟，跟拍一间开了 31 年的修表铺，靠环境声与手部特写推进。</p>
+                <time>2026-11-18</time>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 10 相关推荐 -->
+        <section id="related">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">Related</span>
+              <h2>延伸方向</h2>
+            </div>
+          </div>
+          <div class="rel">
+            <a href="/#picks">封闭空间叙事 <span class="k">6 部</span></a>
+            <a href="/#picks">单元剧结构 <span class="k">9 部</span></a>
+            <a href="/#picks">会议室群戏 <span class="k">4 部</span></a>
+            <a href="/#picks">无旁白纪录 <span class="k">7 部</span></a>
+            <a href="/#picks">低预算调色方法 <span class="k">花絮</span></a>
+            <a href="/#picks">编剧第一场戏写法 <span class="k">访谈</span></a>
+            <a href="/#picks">出租屋生活题材 <span class="k">11 部</span></a>
+            <a href="/#picks">素人嘉宾微综艺 <span class="k">8 档</span></a>
+          </div>
+        </section>
+
+        <!-- 11 榜单 + 时间线 -->
+        <section id="board">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">Board</span>
+              <h2>热播榜单</h2>
+            </div>
+            <span class="pill">11-25 10:00 更新</span>
+          </div>
+          <div class="board">
+            <div class="bd">
+              <h4>短片剧集 · 本周热度</h4>
+              <ol>
+                <li>合租第 90 天 <span>12.1 万</span></li>
+                <li>夜行电车 <span>9.4 万</span></li>
+                <li>放学别走 <span>8.3 万</span></li>
+                <li>午夜便利店 <span>7.8 万</span></li>
+                <li>她说要辞职 <span>6.5 万</span></li>
+              </ol>
+            </div>
+            <div class="bd">
+              <h4>微综艺与幕后 · 收藏</h4>
+              <ol>
+                <li>编剧圆桌第二期 <span>3.6 千</span></li>
+                <li>三平米厨房 先导片 <span>2.9 千</span></li>
+                <li>导演手记：夜行电车调色 <span>2.1 千</span></li>
+                <li>修表铺的下午 <span>1.8 千</span></li>
+                <li>合租第 90 天 搬家戏花絮 <span>1.4 千</span></li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section id="timeline">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">Timeline</span>
+              <h2>上线时间线</h2>
+            </div>
+          </div>
+          <ul class="tl">
+            <li><time>11-25</time><span class="tx"><b>《夜行电车》第 8 集</b>与调色花絮同日上线</span></li>
+            <li><time>11-24</time><span class="tx"><b>《合租第 90 天》</b>全 10 集完结，进入可连看</span></li>
+            <li><time>11-23</time><span class="tx"><b>《放学别走》第 9 集</b>上线，志愿填报夜</span></li>
+            <li><time>11-22</time><span class="tx"><b>《午夜便利店》番外</b>补完第 3 集顾客去向</span></li>
+            <li><time>11-20</time><span class="tx"><b>编剧圆桌第二期</b>发布，附三段剧本原稿</span></li>
+            <li><time>11-18</time><span class="tx"><b>《修表铺的下午》</b>上线，生活纪录无旁白条目</span></li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- 右辅助栏 -->
+      <aside class="side" aria-label="辅助信息">
+        <div class="sbox">
+          <h3>热播榜</h3>
+          <ul class="rank">
+            <li><span class="r">01</span><span class="rn">合租第 90 天</span><span class="rc">完结</span></li>
+            <li><span class="r">02</span><span class="rn">夜行电车</span><span class="rc">8/12</span></li>
+            <li><span class="r">03</span><span class="rn">放学别走</span><span class="rc">9/12</span></li>
+            <li><span class="r">04</span><span class="rn">午夜便利店</span><span class="rc">完结</span></li>
+            <li><span class="r">05</span><span class="rn">她说要辞职</span><span class="rc">6/10</span></li>
+            <li><span class="r">06</span><span class="rn">三平米厨房</span><span class="rc">先导</span></li>
+            <li><span class="r">07</span><span class="rn">修表铺的下午</span><span class="rc">纪录</span></li>
+          </ul>
+        </div>
+
+        <div class="sbox">
+          <h3>页内导航</h3>
+          <ul class="toc">
+            <li><a href="/#overview"><span class="tt">01</span>内容概览</a></li>
+            <li><a href="/#picks"><span class="tt">02</span>本周精选条目</a></li>
+            <li><a href="/#feed"><span class="tt">03</span>最新更新</a></li>
+            <li><a href="/#cats"><span class="tt">04</span>按类型找片</a></li>
+            <li><a href="/#deep"><span class="tt">05</span>深度解析</a></li>
+            <li><a href="/#guide"><span class="tt">06</span>观看顺序</a></li>
+            <li><a href="/#faq"><span class="tt">07</span>常见问题</a></li>
+            <li><a href="/#comments"><span class="tt">08</span>观众评论</a></li>
+            <li><a href="/#news"><span class="tt">09</span>相关资讯</a></li>
+            <li><a href="/#board"><span class="tt">10</span>热播榜单</a></li>
+          </ul>
+        </div>
+
+        <div class="sbox">
+          <h3>创作者说</h3>
+          <p class="quote">“16 分钟的戏，前 90 秒交代不完空间和关系，后面就全是补救。”</p>
+          <cite>—— 《夜行电车》导演，调色花絮</cite>
+          <p class="quote">“解释性台词删掉之后，剩下的动作必须自己会说话。”</p>
+          <cite>—— 编剧圆桌第二期</cite>
+          <p class="mini-note">两段内容合计 44 分钟，已归入创作者访谈与幕后花絮频道。</p>
+        </div>
+
+        <div class="sbox">
+          <h3>观看提示</h3>
+          <p class="mini-note">条目按集免费开放，分集看点与更新时间可直接查看；收藏、追更与评论需要登录账号。在更条目请以更新说明中的排播为准。</p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <div class="f-brand">
+          <svg viewBox="0 0 40 40" role="img" aria-hidden="true">
+            <rect x="1" y="1" width="38" height="38" rx="11" fill="#2b2822"/>
+            <circle cx="13" cy="20" r="7.2" fill="#f0805f"/>
+            <circle cx="25.5" cy="20" r="7.2" fill="#f0a58c" opacity=".7"/>
+            <path d="M20 8.6v22.8" stroke="#f6f2ea" stroke-width="1.6" stroke-linecap="round" opacity=".4"/>
+            <circle cx="20" cy="20" r="2.4" fill="#f6f2ea"/>
+          </svg>
+          <b>m豆传媒的免费版<em>.</em></b>
+        </div>
+        <p class="f-desc">按月整理短片剧集、微综艺与幕后内容的免费观看入口，覆盖都市情感、悬疑、生活纪录与创作者访谈四个方向。</p>
+      </div>
+      <div class="f-col">
+        <h4>内容方向</h4>
+        <ul>
+          <li><a href="/#cats">都市情感短剧</a></li>
+          <li><a href="/#cats">悬疑短剧</a></li>
+          <li><a href="/#cats">生活纪录</a></li>
+          <li><a href="/#cats">微综艺</a></li>
+          <li><a href="/#cats">幕后花絮</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>看片入口</h4>
+        <ul>
+          <li><a href="/#picks">本周精选条目</a></li>
+          <li><a href="/#feed">最新更新</a></li>
+          <li><a href="/#board">热播榜单</a></li>
+          <li><a href="/#timeline">上线时间线</a></li>
+          <li><a href="/#related">延伸方向</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>帮助</h4>
+        <ul>
+          <li><a href="/#guide">第一次观看顺序</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#overview">内容概览</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <p class="note">页面内条目名称、评分、热度与更新时间为内容示例，用于说明类型与排播结构；实际观看以条目更新说明为准。收藏、追更与评论需登录账号。</p>
+      <p>© 2026 m豆传媒的免费版 · 内容整理</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('q');
+  var btn = document.getElementById('searchBtn');
+  var note = document.getElementById('searchNote');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#pickCards .card'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section'));
+
+  function reset(){
+    cards.forEach(function(c){ c.classList.remove('hidden'); });
+    note.classList.remove('on');
+    note.textContent = '';
+  }
+
+  function run(){
+    var kw = (input.value || '').trim().toLowerCase();
+    if(!kw){ reset(); return; }
+    var hit = 0;
+    cards.forEach(function(c){
+      var key = (c.getAttribute('data-key') || '') + ' ' + c.textContent.toLowerCase();
+      var ok = key.indexOf(kw) !== -1;
+      c.classList.toggle('hidden', !ok);
+      if(ok) hit++;
+    });
+    // 非卡片板块按文本匹配，无匹配则整块隐藏，保持结果聚焦
+    sections.forEach(function(s){
+      if(s.id === 'picks') return;
+      var ok = (s.textContent || '').toLowerCase().indexOf(kw) !== -1;
+      s.classList.toggle('hidden', !ok);
+      if(ok) hit++;
+    });
+    note.classList.add('on');
+    if(hit === 0){
+      note.textContent = '没有找到与“' + input.value.trim() + '”相关的条目或板块。可以试试“悬疑”“合租”“微综艺”“幕后”等类型词。';
+    }else{
+      note.textContent = '“' + input.value.trim() + '”匹配到 ' + hit + ' 处内容，已隐藏无关板块。清空搜索框恢复全部内容。';
+    }
+  }
+
+  input.addEventListener('input', run);
+  btn.addEventListener('click', run);
+  input.addEventListener('search', function(){ if(!input.value) reset(); });
+})();
+</script>
+</body>
+              </html>
